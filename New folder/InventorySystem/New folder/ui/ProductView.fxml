@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.ProductController">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10;">
+
+            <TextField fx:id="barcodeField"
+                       promptText="Barcode"/>
+
+            <TextField fx:id="nameField"
+                       promptText="Product Name"/>
+
+            <TextField fx:id="descField"
+                       promptText="Description"/>
+
+            <TextField fx:id="categoryField"
+                       promptText="Category ID"/>
+
+            <CheckBox fx:id="trendCheck"
+                      text="Trending"/>
+
+            <Button text="Add Product"
+                    onAction="#addProduct"/>
+
+        </VBox>
+    </top>
+
+    <center>
+
+        <TableView fx:id="table">
+
+            <columns>
+
+                <TableColumn fx:id="idCol"
+                             text="ID"/>
+
+                <TableColumn fx:id="nameCol"
+                             text="Name"/>
+
+                <TableColumn fx:id="barcodeCol"
+                             text="Barcode"/>
+
+                <TableColumn fx:id="categoryCol"
+                             text="Category"/>
+
+            </columns>
+
+        </TableView>
+
+    </center>
+
+</BorderPane>

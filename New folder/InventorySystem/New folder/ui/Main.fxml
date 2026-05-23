@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainController" prefWidth="1100.0" prefHeight="680.0" tabClosingPolicy="UNAVAILABLE">
+    <tabs>
+        <Tab text="Products Management">
+            <content>
+                <HBox spacing="15.0">
+                    <padding>
+                        <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+                    </padding>
+                    <children>
+                        <VBox spacing="10.0" prefWidth="280.0">
+                            <children>
+                                <Label text="Product Management Form" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                                <Label text="Barcode:"/>
+                                <TextField fx:id="prodBarcodeField"/>
+                                <Label text="Product Name:"/>
+                                <TextField fx:id="prodNameField"/>
+                                <Label text="Description:"/>
+                                <TextField fx:id="prodDescField"/>
+                                <Label text="Category ID:"/>
+                                <TextField fx:id="prodCategoryField"/>
+                                <CheckBox fx:id="prodTrendCheck" text="Is Trend Product"/>
+                                <HBox spacing="8.0">
+                                    <padding><Insets top="10.0"/></padding>
+                                    <children>
+                                        <Button text="Add" onAction="#addProduct" prefWidth="60.0"/>
+                                        <Button text="Update" onAction="#updateProduct" prefWidth="65.0"/>
+                                        <Button text="Delete" onAction="#deleteProduct" prefWidth="65.0"/>
+                                        <Button text="Clear" onAction="#clearProductFields" prefWidth="60.0"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="prodTable" HBox.hgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="prodIdCol" text="ID" prefWidth="50.0"/>
+                                <TableColumn fx:id="prodBarcodeCol" text="Barcode" prefWidth="110.0"/>
+                                <TableColumn fx:id="prodNameCol" text="Product Name" prefWidth="160.0"/>
+                                <TableColumn fx:id="prodCategoryCol" text="Category ID" prefWidth="90.0"/>
+                                <TableColumn fx:id="prodTrendCol" text="Trend" prefWidth="70.0"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+            </content>
+        </Tab>
+
+        <Tab text="Accounts Management">
+            <content>
+                <HBox spacing="15.0">
+                    <padding>
+                        <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+                    </padding>
+                    <children>
+                        <VBox spacing="6.0" prefWidth="280.0">
+                            <children>
+                                <Label text="Account Management Form" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                                <Label text="Role ID:"/>
+                                <TextField fx:id="accRoleIdField"/>
+                                <Label text="Email:"/>
+                                <TextField fx:id="accEmailField"/>
+                                <Label text="Password:"/>
+                                <PasswordField fx:id="accPasswordField"/>
+                                <Label text="First Name:"/>
+                                <TextField fx:id="accFirstNameField"/>
+                                <Label text="Last Name:"/>
+                                <TextField fx:id="accLastNameField"/>
+                                <Label text="Phone Number:"/>
+                                <TextField fx:id="accPhoneField"/>
+                                <Label text="City:"/>
+                                <TextField fx:id="accCityField"/>
+                                <Label text="Street:"/>
+                                <TextField fx:id="accStreetField"/>
+                                <HBox spacing="8.0">
+                                    <padding><Insets top="10.0"/></padding>
+                                    <children>
+                                        <Button text="Add" onAction="#addAccount" prefWidth="60.0"/>
+                                        <Button text="Update" onAction="#updateAccount" prefWidth="65.0"/>
+                                        <Button text="Delete" onAction="#deleteAccount" prefWidth="65.0"/>
+                                        <Button text="Clear" onAction="#clearAccountFields" prefWidth="60.0"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="accTable" HBox.hgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="accIdCol" text="ID" prefWidth="40.0"/>
+                                <TableColumn fx:id="accRoleCol" text="Role" prefWidth="50.0"/>
+                                <TableColumn fx:id="accEmailCol" text="Email" prefWidth="150.0"/>
+                                <TableColumn fx:id="accFirstNameCol" text="First Name" prefWidth="100.0"/>
+                                <TableColumn fx:id="accLastNameCol" text="Last Name" prefWidth="100.0"/>
+                                <TableColumn fx:id="accPhoneCol" text="Phone" prefWidth="100.0"/>
+                                <TableColumn fx:id="accCityCol" text="City" prefWidth="80.0"/>
+                                <TableColumn fx:id="accStreetCol" text="Street" prefWidth="110.0"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+            </content>
+        </Tab>
+
+        <Tab text="Orders Management">
+            <content>
+                <HBox spacing="15.0">
+                    <padding>
+                        <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+                    </padding>
+                    <children>
+                        <VBox spacing="10.0" prefWidth="280.0">
+                            <children>
+                                <Label text="Order Management Form" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                                <Label text="Account ID:"/>
+                                <TextField fx:id="orderAccIdField"/>
+                                <Label text="Status ID:"/>
+                                <TextField fx:id="orderStatusIdField"/>
+                                <Label text="Delivery Company ID:"/>
+                                <TextField fx:id="orderDeliveryIdField"/>
+                                <Label text="Total Price ($):"/>
+                                <TextField fx:id="orderPriceField"/>
+                                <HBox spacing="8.0">
+                                    <padding><Insets top="10.0"/></padding>
+                                    <children>
+                                        <Button text="Add" onAction="#addOrder" prefWidth="60.0"/>
+                                        <Button text="Update" onAction="#updateOrder" prefWidth="65.0"/>
+                                        <Button text="Delete" onAction="#deleteOrder" prefWidth="65.0"/>
+                                        <Button text="Clear" onAction="#clearOrderFields" prefWidth="60.0"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="orderTable" HBox.hgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="orderIdCol" text="Order ID" prefWidth="70.0"/>
+                                <TableColumn fx:id="orderAccIdCol" text="Account ID" prefWidth="90.0"/>
+                                <TableColumn fx:id="orderStatusIdCol" text="Status ID" prefWidth="80.0"/>
+                                <TableColumn fx:id="orderDeliveryIdCol" text="Delivery Co. ID" prefWidth="110.0"/>
+                                <TableColumn fx:id="orderPriceCol" text="Total Price" prefWidth="100.0"/>
+                                <TableColumn fx:id="orderDateCol" text="Created At" prefWidth="160.0"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

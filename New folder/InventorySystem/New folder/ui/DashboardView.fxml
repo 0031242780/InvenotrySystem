@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.DashboardController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-padding: 30;">
+
+    <Label text="Mega PC Market System"
+           style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <Button text="Products"
+            prefWidth="200"
+            onAction="#openProducts"/>
+
+    <Button text="Accounts"
+            prefWidth="200"
+            onAction="#openAccounts"/>
+
+    <Button text="Orders"
+            prefWidth="200"
+            onAction="#openOrders"/>
+
+    <Button text="Inventory"
+            prefWidth="200"
+            onAction="#openInventory"/>
+
+</VBox>
